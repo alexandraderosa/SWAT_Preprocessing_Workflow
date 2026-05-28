@@ -1,0 +1,11 @@
+.ipynb_checkpoints/
+
+*.lock
+*.tmp
+Thumbs.db
+
+*.gdb/
+*.aux.xml
+
+__pycache__/
+*.pyc

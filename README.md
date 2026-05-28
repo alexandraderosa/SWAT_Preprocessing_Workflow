@@ -1,0 +1,210 @@
+\# SWAT Preprocessing Workflow Using ArcGIS Pro and ArcPy
+
+
+
+This repository contains a modular ArcGIS Pro and ArcPy workflow for preparing SWAT-compatible watershed modeling inputs, including hydrologic preprocessing, terrain analysis, land cover and soils standardization, HRU generation support, and watershed composition analysis.
+
+
+
+The workflow was developed to replicate and modernize portions of traditional ArcSWAT preprocessing workflows using reusable Python scripting tools, custom ArcPy toolboxes, and reproducible notebook-based GIS analysis.
+
+
+
+\---
+
+
+
+\## Workflow Overview
+
+
+
+The workflow is organized into four sequential notebooks:
+
+
+
+\### Notebook 1 — Watershed Preparation
+
+\- study area extraction
+
+\- DEM preparation
+
+\- flow routing
+
+\- stream network generation
+
+\- subbasin delineation
+
+
+
+\### Notebook 2 — SWAT Spatial Inputs
+
+\- SWAT land cover preparation
+
+\- soils and hydrologic soil group processing
+
+\- slope classification
+
+\- raster standardization and alignment
+
+
+
+\### Notebook 3 — Watershed Composition
+
+\- subbasin composition summaries
+
+\- dominant land cover, soils, and slope analysis
+
+\- watershed interpretation tables
+
+\- presentation-ready charts and exports
+
+
+
+\### Notebook 4 — HRU Definitions and Watershed Characterization
+
+\- HRU summary generation
+
+\- watershed composition analysis
+
+\- final export tables
+
+\- GIS-ready joined interpretation layers
+
+
+
+\---
+
+
+
+\## Tools and Libraries
+
+
+
+\### GIS Software
+
+\- ArcGIS Pro
+
+\- ArcPy
+
+\- Spatial Analyst
+
+
+
+\### Python Libraries
+
+\- Python
+
+\- Pandas
+
+\- Matplotlib
+
+
+
+\### Custom Workflow Components
+
+\- reusable Python helper functions
+
+\- custom ArcPy Python toolboxes
+
+\- modular notebook workflow architecture
+
+
+
+\---
+
+
+
+\## Repository Structure
+
+
+
+```text
+
+swat-preprocessing-workflow/
+
+│
+
+├── notebooks/
+
+├── python\_helpers/
+
+├── figures/
+
+├── docs/
+
+└── toolbox\_reference/
+
+```
+
+
+
+\---
+
+
+
+\## Data Requirements
+
+
+
+Large GIS datasets and proprietary source data are not included in this repository.
+
+
+
+Users must provide their own:
+
+\- DEM datasets
+
+\- land cover datasets
+
+\- soils datasets
+
+\- watershed boundary datasets
+
+\- LiDAR-derived terrain products
+
+
+
+Notebook paths have been generalized for public release.
+
+
+
+\---
+
+
+
+\## Project Purpose
+
+
+
+This workflow was developed as part of a broader effort to modernize and document reproducible GIS preprocessing workflows for watershed modeling and hydrologic analysis using ArcGIS Pro and Python-based automation.
+
+
+
+The project emphasizes:
+
+\- reproducibility
+
+\- modular GIS scripting
+
+\- SWAT-compatible preprocessing
+
+\- watershed characterization
+
+\- reusable hydrologic workflow design
+
+
+
+\---
+
+
+
+\## Author
+
+
+
+Alexandra DeRosa  
+
+Master of Environmental Science and Management  
+
+University of Rhode Island
+
