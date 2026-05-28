@@ -120,14 +120,14 @@ Notebook paths have been generalized for public release.
 
 This workflow was developed as part of a broader effort to modernize and document reproducible GIS preprocessing workflows for watershed modeling and hydrologic analysis using ArcGIS Pro and Python-based automation.
 
-The project emphasizes:
+The primary goals of this project were to:
 
-- reproducibility
-- modular GIS scripting
-- SWAT-compatible preprocessing
-- watershed characterization
-- reusable hydrologic workflow design
-
+- modernize a legacy ArcMap SWAT preprocessing workflow
+- transition manual GIS operations into reproducible Python notebooks
+- automate repetitive hydrologic preprocessing tasks
+- improve workflow transparency and quality assurance (QA)
+- generate clean SWAT-ready spatial inputs
+- document preprocessing logic in a reproducible and modular format
 ---
 
 ## Author
