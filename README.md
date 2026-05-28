@@ -6,6 +6,12 @@ The workflow was developed to replicate and modernize portions of traditional Ar
 
 ---
 
+## Workflow Diagram
+
+![SWAT Workflow Diagram](Charts/SWAT_Workflow_Diagram.png)
+
+---
+
 ## Workflow Overview
 
 The workflow is organized into four sequential notebooks:
