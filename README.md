@@ -99,6 +99,8 @@ SWAT_Preprocessing_Workflow/
 ├── Charts/
 ├── Maps/
 ├── Tables/
+```
+
 ---
 
 ## Data Requirements
