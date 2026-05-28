@@ -41,19 +41,23 @@ The workflow is organized into four sequential notebooks:
 
 ---
 
+```markdown id="yxd8h8"
 ## Sample Project Outputs
+
+This workflow produces watershed characterization outputs used to evaluate land cover, soils, slope, and HRU structure for SWAT-style watershed modeling.
 
 ### Watershed Composition
 
-![Watershed Land Cover Composition](Charts/watershed_landcover_composition.png)
+![Watershed Land Cover Composition](Charts/Watershed_LandCover_Composition.png)
 
-![Hydrologic Soil Group Distribution](Charts/hydrologic_soil_group_distribution.png)
+![Hydrologic Soil Group Distribution](Charts/Hydrologic_Soil_Group_Distribution.png)
 
 ### HRU Characterization
 
-![Total HRUs by Subbasin](Charts/total_hrus_by_subbasin.png)
+![Total HRUs by Subbasin](Charts/Total_HRUs_By_Subbasin.png)
 
 Additional chart outputs are available in the `/Charts` directory.
+```
 ---
 
 ## Tools and Libraries
