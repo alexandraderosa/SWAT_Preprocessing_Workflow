@@ -16,7 +16,7 @@ The workflow was developed to replicate and modernize portions of traditional Ar
 
 The workflow is organized into four sequential notebooks:
 
-### Notebook 1 — Watershed Preparation
+### Notebook 1 - Watershed Preparation
 
 - study area extraction
 - DEM preparation
@@ -24,21 +24,21 @@ The workflow is organized into four sequential notebooks:
 - stream network generation
 - subbasin delineation
 
-### Notebook 2 — SWAT Spatial Inputs
+### Notebook 2 - SWAT Spatial Inputs
 
 - SWAT land cover preparation
 - soils and hydrologic soil group processing
 - slope classification
 - raster standardization and alignment
 
-### Notebook 3 — Watershed Composition
+### Notebook 3 - Watershed Composition
 
 - subbasin composition summaries
 - dominant land cover, soils, and slope analysis
 - watershed interpretation tables
 - chart generation and export workflows
 
-### Notebook 4 — HRU Definitions and Watershed Characterization
+### Notebook 4 - HRU Definitions and Watershed Characterization
 
 - HRU summary generation
 - watershed composition analysis
