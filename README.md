@@ -41,7 +41,6 @@ The workflow is organized into four sequential notebooks:
 
 ---
 
-```markdown id="yxd8h8"
 ## Sample Project Outputs
 
 This workflow produces watershed characterization outputs used to evaluate land cover, soils, slope, and HRU structure for SWAT-style watershed modeling.
