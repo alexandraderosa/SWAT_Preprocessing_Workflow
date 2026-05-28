@@ -1,0 +1,12 @@
+Subbasin ID,NLCD Code,NLCD Description,SWAT ID,SWAT LULC Code,Dominant LULC Area (m²),Dominant LULC Area (acres),Percent of Subbasin
+1,420,Softwood Forest,43,FRST,9906000.0,2447.82,39.29
+2,410,Deciduous Forest,41,FRSD,4765800.0,1177.65,46.65
+3,410,Deciduous Forest,41,FRSD,2759100.0,681.79,53.86
+4,420,Softwood Forest,43,FRST,1987900.0,491.22,39.81
+5,420,Softwood Forest,43,FRST,2318200.0,572.84,32.83
+6,420,Softwood Forest,43,FRST,4185600.0,1034.28,32.89
+7,420,Softwood Forest,43,FRST,1986800.0,490.95,29.97
+8,420,Softwood Forest,43,FRST,4980600.0,1230.73,32.37
+9,410,Deciduous Forest,41,FRSD,5077100.0,1254.58,38.24
+10,420,Softwood Forest,43,FRST,2536700.0,626.83,35.61
+11,410,Deciduous Forest,41,FRSD,4596500.0,1135.82,38.23
