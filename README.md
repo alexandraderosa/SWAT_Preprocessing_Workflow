@@ -89,14 +89,16 @@ Additional chart outputs are available in the `/Charts` directory.
 
 ## Repository Structure
 
+```text
 SWAT_Preprocessing_Workflow/
+│
+├── Notebooks/
+├── Python_Helpers/
+├── Toolbox_Reference/
 │
 ├── Charts/
 ├── Maps/
-├── Notebooks/
-├── Python_Helpers/
 ├── Tables/
-└── Toolbox_Reference/
 
 ---
 
