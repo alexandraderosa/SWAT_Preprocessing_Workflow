@@ -12,36 +12,36 @@ The workflow is organized into four sequential notebooks:
 
 ### Notebook 1 — Watershed Preparation
 
-* study area extraction
-* DEM preparation
-* flow routing
-* stream network generation
-* subbasin delineation
+- study area extraction
+- DEM preparation
+- flow routing
+- stream network generation
+- subbasin delineation
 
 ### Notebook 2 — SWAT Spatial Inputs
 
-* SWAT land cover preparation
-* soils and hydrologic soil group processing
-* slope classification
-* raster standardization and alignment
+- SWAT land cover preparation
+- soils and hydrologic soil group processing
+- slope classification
+- raster standardization and alignment
 
 ### Notebook 3 — Watershed Composition
 
-* subbasin composition summaries
-* dominant land cover, soils, and slope analysis
-* watershed interpretation tables
-* chart generation and export workflows
+- subbasin composition summaries
+- dominant land cover, soils, and slope analysis
+- watershed interpretation tables
+- chart generation and export workflows
 
 ### Notebook 4 — HRU Definitions and Watershed Characterization
 
-* HRU summary generation
-* watershed composition analysis
-* final export tables
-* GIS-ready joined interpretation layers
+- HRU summary generation
+- watershed composition analysis
+- final export tables
+- GIS-ready joined interpretation layers
 
 ---
 
-## Sample Project Outputs
+## Project Outputs
 
 This workflow produces watershed characterization outputs used to evaluate land cover, soils, slope, and HRU structure for SWAT-style watershed modeling.
 
@@ -56,35 +56,34 @@ This workflow produces watershed characterization outputs used to evaluate land 
 ![Total HRUs by Subbasin](Charts/Total_HRUs_By_Subbasin.png)
 
 Additional chart outputs are available in the `/Charts` directory.
-```
+
 ---
 
 ## Tools and Libraries
 
 ### GIS Software
 
-* ArcGIS Pro
-* ArcPy
-* Spatial Analyst
+- ArcGIS Pro
+- ArcPy
+- Spatial Analyst
 
 ### Python Libraries
 
-* Python
-* Pandas
-* Matplotlib
+- Python
+- Pandas
+- Matplotlib
 
 ### Custom Workflow Components
 
-* reusable Python helper functions
-* custom ArcPy Python toolboxes
-* modular notebook workflow architecture
+- reusable Python helper functions
+- custom ArcPy Python toolboxes
+- modular notebook workflow architecture
 
 ---
 
 ## Repository Structure
 
-```text
-swat-preprocessing-workflow/
+SWAT_Preprocessing_Workflow/
 │
 ├── Charts/
 ├── Maps/
@@ -92,7 +91,6 @@ swat-preprocessing-workflow/
 ├── Python_Helpers/
 ├── Tables/
 └── Toolbox_Reference/
-```
 
 ---
 
@@ -102,11 +100,11 @@ Large GIS datasets and proprietary source data are not included in this reposito
 
 Users must provide their own:
 
-* DEM datasets
-* land cover datasets
-* soils datasets
-* watershed boundary datasets
-* LiDAR-derived terrain products
+- DEM datasets
+- land cover datasets
+- soils datasets
+- watershed boundary datasets
+- LiDAR-derived terrain products
 
 Notebook paths have been generalized for public release.
 
@@ -118,16 +116,16 @@ This workflow was developed as part of a broader effort to modernize and documen
 
 The project emphasizes:
 
-* reproducibility
-* modular GIS scripting
-* SWAT-compatible preprocessing
-* watershed characterization
-* reusable hydrologic workflow design
+- reproducibility
+- modular GIS scripting
+- SWAT-compatible preprocessing
+- watershed characterization
+- reusable hydrologic workflow design
 
 ---
 
 ## Author
 
-Alexandra DeRosa
-Master of Environmental Science and Management
+Alexandra DeRosa  
+Master of Environmental Science and Management  
 University of Rhode Island
