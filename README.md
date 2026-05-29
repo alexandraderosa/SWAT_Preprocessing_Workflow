@@ -1,8 +1,23 @@
 # SWAT Preprocessing Workflow Using ArcGIS Pro and ArcPy
 
-This repository contains a modular ArcGIS Pro and ArcPy workflow for preparing SWAT-compatible watershed modeling inputs, including hydrologic preprocessing, terrain analysis, land cover and soils standardization, HRU generation support, and watershed composition analysis.
+This repository contains a modular ArcGIS Pro and ArcPy workflow for preparing SWAT-compatible watershed modeling inputs, including hydrologic preprocessing, terrain analysis, land cover and soils standardization, watershed characterization, and hydrologic response unit (HRU) development.
 
 The workflow was developed to replicate and modernize portions of traditional ArcSWAT preprocessing workflows using reusable Python scripting tools, custom ArcPy toolboxes, and reproducible notebook-based GIS analysis.
+
+---
+
+## Project Purpose
+
+This workflow was developed as part of a broader effort to modernize and document reproducible GIS preprocessing workflows for watershed modeling and hydrologic analysis using ArcGIS Pro and Python-based automation.
+
+The primary goals of this project were to:
+
+- modernize a legacy ArcMap SWAT preprocessing workflow
+- transition manual GIS operations into reproducible Python notebooks
+- automate repetitive hydrologic preprocessing tasks
+- improve workflow transparency and quality assurance (QA)
+- generate clean SWAT-ready spatial inputs
+- document preprocessing logic in a reproducible and modular format
 
 ---
 
@@ -16,7 +31,7 @@ The workflow was developed to replicate and modernize portions of traditional Ar
 
 The workflow is organized into four sequential notebooks:
 
-### Notebook 1 - Watershed Preparation
+### Notebook 1 — Watershed Preparation
 
 - study area extraction
 - DEM preparation
@@ -24,21 +39,21 @@ The workflow is organized into four sequential notebooks:
 - stream network generation
 - subbasin delineation
 
-### Notebook 2 - SWAT Spatial Inputs
+### Notebook 2 — SWAT Spatial Inputs
 
 - SWAT land cover preparation
 - soils and hydrologic soil group processing
 - slope classification
 - raster standardization and alignment
 
-### Notebook 3 - Watershed Composition
+### Notebook 3 — Watershed Composition
 
 - subbasin composition summaries
 - dominant land cover, soils, and slope analysis
 - watershed interpretation tables
 - chart generation and export workflows
 
-### Notebook 4 - HRU Definitions and Watershed Characterization
+### Notebook 4 — HRU Definitions and Watershed Characterization
 
 - HRU summary generation
 - watershed composition analysis
@@ -49,7 +64,7 @@ The workflow is organized into four sequential notebooks:
 
 ## Project Outputs
 
-This workflow produces watershed characterization outputs used to evaluate land cover, soils, slope, and HRU structure for SWAT-style watershed modeling.
+This workflow produces watershed characterization outputs used to evaluate land cover, soils, slope, and watershed composition for SWAT-style watershed modeling.
 
 ### Watershed Composition
 
@@ -57,11 +72,25 @@ This workflow produces watershed characterization outputs used to evaluate land 
 
 ![Hydrologic Soil Group Distribution](Charts/Hydrologic_Soil_Group_Distribution.png)
 
-### HRU Characterization
+### Watershed Characterization
 
 ![Total HRUs by Subbasin](Charts/Total_HRUs_By_Subbasin.png)
 
-Additional chart outputs are available in the `/Charts` directory.
+Additional charts, tables, and maps are available throughout the repository.
+
+---
+
+## Repository Structure
+
+```text
+SWAT_Preprocessing_Workflow/
+├── Charts/
+├── Maps/
+├── Notebooks/
+├── Python_Helpers/
+├── Tables/
+└── Toolbox_Reference/
+```
 
 ---
 
@@ -87,22 +116,6 @@ Additional chart outputs are available in the `/Charts` directory.
 
 ---
 
-## Repository Structure
-
-```text
-SWAT_Preprocessing_Workflow/
-│
-├── Notebooks/
-├── Python_Helpers/
-├── Toolbox_Reference/
-│
-├── Charts/
-├── Maps/
-├── Tables/
-```
-
----
-
 ## Data Requirements
 
 Large GIS datasets and proprietary source data are not included in this repository.
@@ -119,22 +132,20 @@ Notebook paths have been generalized for public release.
 
 ---
 
-## Project Purpose
+## Related Work
 
-This workflow was developed as part of a broader effort to modernize and document reproducible GIS preprocessing workflows for watershed modeling and hydrologic analysis using ArcGIS Pro and Python-based automation.
+This repository focuses on GIS preprocessing and watershed characterization for SWAT modeling.
 
-The primary goals of this project were to:
+A companion repository documents SWAT model calibration, validation, uncertainty analysis, and hydrologic interpretation using SWAT and SWAT-CUP.
 
-- modernize a legacy ArcMap SWAT preprocessing workflow
-- transition manual GIS operations into reproducible Python notebooks
-- automate repetitive hydrologic preprocessing tasks
-- improve workflow transparency and quality assurance (QA)
-- generate clean SWAT-ready spatial inputs
-- document preprocessing logic in a reproducible and modular format
 ---
 
 ## Author
 
-Alexandra DeRosa  
+Alexandra DeRosa
+
 Master of Environmental Science and Management  
 University of Rhode Island
+
+Graduate Certificate in Hydrology  
+Graduate Certificate in GIS and Remote Sensing
