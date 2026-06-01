@@ -1,23 +1,60 @@
-# SWAT Preprocessing Workflow Using ArcGIS Pro and ArcPy
+# Transparent SWAT Watershed Delineation and HRU Development Framework
 
-This repository contains a modular ArcGIS Pro and ArcPy workflow for preparing SWAT-compatible watershed modeling inputs, including hydrologic preprocessing, terrain analysis, land cover and soils standardization, watershed characterization, and hydrologic response unit (HRU) development.
+This repository contains a modular ArcGIS Pro and ArcPy workflow for watershed delineation, terrain analysis, SWAT input preparation, watershed characterization, and hydrologic response unit (HRU) development.
 
-The workflow was developed to replicate and modernize portions of traditional ArcSWAT preprocessing workflows using reusable Python scripting tools, custom ArcPy toolboxes, and reproducible notebook-based GIS analysis.
+Unlike traditional ArcSWAT preprocessing workflows, this project explicitly exposes and documents the intermediate GIS operations that are often treated as a "black box." Each processing step is implemented in reproducible Python notebooks with automated quality assurance (QA) checks, allowing users to inspect, validate, troubleshoot, and modify every stage of watershed preparation.
+
+The workflow was developed using ArcGIS Pro, ArcPy, and custom Python tools to create transparent, reproducible, and auditable SWAT preprocessing workflows.
+
+---
+
+## Why This Workflow Exists
+
+Many hydrologic modeling workflows rely on software tools that automate watershed delineation, subbasin generation, land cover processing, soils processing, and HRU development.
+
+While these tools are extremely useful, they often obscure the underlying hydrologic and GIS operations being performed.
+
+This project was developed to deconstruct those processes into transparent, reproducible components that can be independently inspected, validated, modified, and extended.
+
+Rather than treating watershed preprocessing as a black box, the workflow reconstructs the major steps typically performed within ArcSWAT using ArcGIS Pro, ArcPy, custom Python tools, and automated QA procedures.
+
+The result is a workflow that not only generates SWAT-ready inputs, but also documents how those inputs were created and validates the assumptions made at each stage of processing.
 
 ---
 
 ## Project Purpose
 
-This workflow was developed as part of a broader effort to modernize and document reproducible GIS preprocessing workflows for watershed modeling and hydrologic analysis using ArcGIS Pro and Python-based automation.
-
 The primary goals of this project were to:
 
 - modernize a legacy ArcMap SWAT preprocessing workflow
+- expose intermediate GIS processing steps typically hidden within ArcSWAT
 - transition manual GIS operations into reproducible Python notebooks
 - automate repetitive hydrologic preprocessing tasks
-- improve workflow transparency and quality assurance (QA)
-- generate clean SWAT-ready spatial inputs
+- improve workflow transparency through automated QA and validation
+- generate SWAT-ready watershed inputs
 - document preprocessing logic in a reproducible and modular format
+- provide a framework for troubleshooting and auditing watershed preparation workflows
+
+---
+
+## Workflow Philosophy
+
+Traditional SWAT preprocessing often functions as a black box:
+
+DEM → ArcSWAT → HRUs
+
+This workflow instead treats each processing stage as a transparent and independently verifiable GIS operation.
+
+Key principles include:
+
+- reproducible notebook-based workflows
+- modular GIS processing steps
+- automated quality assurance and validation
+- explicit intermediate outputs
+- traceable watershed delineation logic
+- reproducible HRU generation procedures
+
+Every notebook concludes with QA dashboards that summarize workflow outputs, validation metrics, and readiness for the next processing stage.
 
 ---
 
@@ -29,42 +66,126 @@ The primary goals of this project were to:
 
 ## Workflow Overview
 
-The workflow is organized into four sequential notebooks:
+The workflow is organized into four sequential notebooks.
 
-### Notebook 1 - Watershed Preparation
+### Notebook 1 – Watershed Delineation and Terrain Processing
+
+This notebook establishes the hydrologic framework of the watershed.
+
+**Major workflow components:**
 
 - study area extraction
-- DEM preparation
-- flow routing
-- stream network generation
-- subbasin delineation
+- DEM preparation and conditioning
+- sink identification and preservation
+- flow direction generation
+- flow accumulation generation
+- stream network extraction
+- stream link generation
+- watershed delineation
+- subbasin generation
+- watershed QA and validation
 
-### Notebook 2 - SWAT Spatial Inputs
+**Outputs:**
 
-- SWAT land cover preparation
+- flow direction raster
+- flow accumulation raster
+- stream network
+- stream links
+- subbasin raster
+- subbasin polygons
+
+### Notebook 2 – SWAT Spatial Input Preparation
+
+This notebook prepares and standardizes SWAT spatial inputs while validating raster coverage and consistency.
+
+**Major workflow components:**
+
+- SWAT land cover reclassification
 - soils and hydrologic soil group processing
+- slope raster generation
 - slope classification
-- raster standardization and alignment
+- raster alignment and standardization
+- zonal statistics by subbasin
+- spatial QA and coverage validation
 
-### Notebook 3 - Watershed Composition
+**Outputs:**
 
-- subbasin composition summaries
-- dominant land cover, soils, and slope analysis
-- watershed interpretation tables
-- chart generation and export workflows
+- SWAT land cover raster
+- soils raster
+- slope class raster
+- land cover summaries by subbasin
+- soils summaries by subbasin
+- slope summaries by subbasin
 
-### Notebook 4 - HRU Definitions and Watershed Characterization
+### Notebook 3 – Watershed Composition and Dominant Attribute Analysis
 
-- HRU summary generation
+This notebook summarizes watershed composition and assigns dominant watershed characteristics to each subbasin.
+
+**Major workflow components:**
+
 - watershed composition analysis
-- final export tables
-- GIS-ready joined interpretation layers
+- dominant land cover assignment
+- dominant hydrologic soil group assignment
+- dominant slope assignment
+- chart generation
+- export table creation
+- GIS layer enrichment
+
+**Outputs:**
+
+- watershed composition tables
+- dominant land cover summaries
+- dominant hydrologic soil group summaries
+- dominant slope summaries
+- watershed characterization figures
+- GIS-ready subbasin interpretation layers
+
+### Notebook 4 – Hydrologic Response Unit (HRU) Development
+
+This notebook generates SWAT-style hydrologic response units and evaluates the impacts of HRU filtering thresholds.
+
+**Major workflow components:**
+
+- HRU raster development
+- HRU definition generation
+- HRU area calculations
+- HRU threshold filtering
+- HRU reduction analysis
+- watershed composition summaries
+- final SWAT-ready HRU exports
+
+**Outputs:**
+
+- HRU definition tables
+- filtered HRU tables
+- subbasin HRU summaries
+- watershed HRU summaries
+- SWAT-ready HRU characterization outputs
+
+---
+
+## Quality Assurance Framework
+
+Automated quality assurance checks are integrated throughout the workflow.
+
+Validation components include:
+
+- watershed area preservation checks
+- raster-to-polygon consistency checks
+- sink and pond validation
+- raster coverage validation
+- raster alignment validation
+- subbasin summary completeness checks
+- dominant attribute assignment checks
+- HRU filtering impact assessment
+
+Each notebook concludes with a handoff QA dashboard summarizing workflow outputs, validation metrics, and readiness for the next processing stage.
 
 ---
 
 ## Project Outputs
 
-This workflow produces watershed characterization outputs used to evaluate land cover, soils, slope, and watershed composition for SWAT-style watershed modeling.
+This workflow produces SWAT-ready watershed inputs and watershed characterization products suitable for hydrologic modeling, watershed assessment, and spatial analysis.
 
 ### Watershed Composition
 
@@ -76,7 +197,7 @@ This workflow produces watershed characterization outputs used to evaluate land 
 
 ![Total HRUs by Subbasin](Charts/Total_HRUs_By_Subbasin.png)
 
-Additional charts, tables, and maps are available throughout the repository.
+Additional charts, tables, maps, and GIS-ready datasets are available throughout the repository.
 
 ---
 
@@ -111,8 +232,10 @@ SWAT_Preprocessing_Workflow/
 ### Custom Workflow Components
 
 - reusable Python helper functions
-- custom ArcPy Python toolboxes
+- custom ArcPy toolboxes
 - modular notebook workflow architecture
+- automated QA dashboards
+- reproducible watershed preprocessing tools
 
 ---
 
@@ -132,11 +255,23 @@ Notebook paths have been generalized for public release.
 
 ---
 
-## Related Work
+## Relationship to Companion Repository
 
 This repository focuses on GIS preprocessing and watershed characterization for SWAT modeling.
 
-A companion repository documents SWAT model calibration, validation, uncertainty analysis, and hydrologic interpretation using SWAT and SWAT-CUP.
+The workflow produces transparent, reproducible, and QA-validated watershed inputs that can be used in ArcSWAT and related hydrologic modeling frameworks.
+
+A companion repository documents the subsequent modeling phase, including:
+
+- ArcSWAT model development
+- streamflow calibration
+- model validation
+- sensitivity analysis
+- SUFI-2 uncertainty analysis
+- watershed interpretation
+- scenario analysis
+
+Together, the two repositories document the complete watershed modeling workflow from raw spatial data through calibrated hydrologic simulation.
 
 ---
 
